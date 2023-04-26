@@ -15,165 +15,89 @@
     <title>Prices</title>
   </head>
   <body>
-    <div class="content__boxed">
-      <div class="content__wrap">
-        <div class="py-5 my-5"></div>
-        <h2 class="h1 mt-5 mb-4 text-center">Google Chrome Extension Plans</h2>
-        <div class="d-md-flex justify-content-center">
+    <div class="container">
+      <div class="plans">
+        <h3 class="plans__title">Google Chrome Extension Plans</h3>
+        <ul class="plans__list">
           <!-- Modern pricing table - Free -->
-          <div class="w-md-250px">
-            <div class="card my-3">
-              <div class="card-body">
-                <div class="text-center">
-                  <h5>Free</h5>
-                  <div class="mt-4">
-                    <span class="h3 m-0 text-primary">$</span>
-                    <span class="display-2 text-primary">0</span>
-                    <span>/mo</span>
-                  </div>
-                </div>
-
-                <ul class="list-group list-group-borderless mt-4">
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Word Definitions
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Up to 10 Lists
-                  </li>
-                </ul>
-
-                <div class="d-grid mt-4">
-                  <button class="btn btn-outline-primary">
-                    <a href="https://boostvocab.com/register">Sign up today</a>
-                  </button>
-                </div>
-              </div>
+          <li class="plans__card">
+            <div class="plans__card-wrapper">
+              <p class="plans__name">Free</p>
+              <p class="plans__price">
+                <span class="plans__currency-sign">$</span> <span class="plans__cost">0</span>
+                <span class="plans__period">/mo</span>
+              </p>
+              <ul class="plans__benefits-list">
+                <li class="plans__benefits-item">Word Definitions</li>
+                <li class="plans__benefits-item">Up to 10 Lists</li>
+              </ul>
+              <a class="plans__signup-btn" href="https://boostvocab.com/register">Sign up today</a>
             </div>
-          </div>
+          </li>
           <!-- END : Modern pricing table - Free -->
           <!-- Modern pricing table - MOnthly -->
-          <div class="w-md-250px">
-            <div class="card my-3">
-              <div class="card-body">
-                <div class="text-center">
-                  <h5>Monthly</h5>
-                  <div class="mt-4">
-                    <span class="h3 m-0 text-primary">$</span>
-                    <span class="display-2 text-primary">3.99</span>
-                    <span>/mo</span>
-                  </div>
-                </div>
-
-                <ul class="list-group list-group-borderless mt-4">
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Word Definitions
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Unlimited Lists
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Directly add words from any site using Chrome Extension
-                  </li>
-                </ul>
-
-                <div class="d-grid mt-4">
-                  <button class="btn btn-outline-primary">
-                    <a target="new" href="https://buy.stripe.com/5kAdRpbLh3k71RS6oo"
-                      >Sign up today</a
-                    >
-                  </button>
-                </div>
-              </div>
+          <li class="plans__card">
+            <div class="plans__card-wrapper">
+              <p class="plans__name">Monthly</p>
+              <p class="plans__price">
+                <span class="plans__currency-sign">$</span> <span class="plans__cost">3.99</span>
+                <span class="plans__period">/mo</span>
+              </p>
+              <ul class="plans__benefits-list">
+                <li class="plans__benefits-item">Word Definitions</li>
+                <li class="plans__benefits-item">Unlimited Lists</li>
+                <li class="plans__benefits-item">
+                  Directly add words from any site using Chrome Extension
+                </li>
+              </ul>
+              <a class="plans__signup-btn" href="https://boostvocab.com/register">Sign up today</a>
             </div>
-          </div>
+          </li>
+
           <!-- END : Modern pricing table - Monthly -->
 
           <!-- Modern pricing table - Yearly -->
-          <div class="w-md-250px" style="z-index: 2">
-            <div class="card h-100 border border-2 border-success shadow">
-              <div class="ribbon"><span>POPULAR</span></div>
-              <div class="card-body">
-                <div class="text-center">
-                  <h5>Yearly</h5>
-                  <div class="mt-4">
-                    <span class="h3 m-0 text-primary">$</span>
-                    <span class="display-2 text-primary">29.99</span>
-                    <span>/year</span>
-                  </div>
-                </div>
-
-                <ul class="list-group list-group-borderless mt-4">
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Word Definitions
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Unlimited Lists
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Directly add words from any site using Chrome Extension
-                  </li>
-                </ul>
-
-                <div class="d-grid mt-4">
-                  <button class="btn btn-success">
-                    <a target="new" href="https://buy.stripe.com/aEU6oX3eL6wjdAA7st"
-                      >Sign up today</a
-                    >
-                  </button>
-                </div>
-              </div>
+          <li class="plans__card">
+            <div class="plans__ribbon"><span class="plans__popular">POPULAR</span></div>
+            <div class="plans__card-wrapper">
+              <p class="plans__name">Yearly</p>
+              <p class="plans__price">
+                <span class="plans__currency-sign">$</span> <span class="plans__cost">29.99</span>
+                <span class="plans__period">/year</span>
+              </p>
+              <ul class="plans__benefits-list">
+                <li class="plans__benefits-item">Word Definitions</li>
+                <li class="plans__benefits-item">Unlimited Lists</li>
+                <li class="plans__benefits-item">
+                  Directly add words from any site using Chrome Extension
+                </li>
+              </ul>
+              <a class="plans__signup-btn" href="https://boostvocab.com/register">Sign up today</a>
             </div>
-          </div>
+          </li>
+
           <!-- END : Modern pricing table - Yearly -->
 
           <!-- Modern pricing table - Lifetime -->
-          <div class="w-md-250px">
-            <div class="card my-3">
-              <div class="card-body">
-                <div class="text-center">
-                  <h5>Lifetime</h5>
-                  <div class="mt-4">
-                    <span class="h3 m-0 text-primary">$</span>
-                    <span class="display-2 text-primary">99</span>
-                    <span>one time</span>
-                  </div>
-                </div>
-
-                <ul class="list-group list-group-borderless mt-4">
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Word Definitions
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Unlimited Lists
-                  </li>
-                  <li class="list-group-item">
-                    <i class="demo-pli-yes fs-5 me-2 text-success"></i>
-                    Directly add words from any site using Chrome Extension
-                  </li>
-                </ul>
-
-                <div class="d-grid mt-4">
-                  <button class="btn btn-outline-primary">
-                    <a target="new" href="https://buy.stripe.com/4gwfZxbLh8Er54428a"
-                      >Sign up today</a
-                    >
-                  </button>
-                </div>
-              </div>
+          <li class="plans__card">
+            <div class="plans__card-wrapper">
+              <p class="plans__name">Lifetime</p>
+              <p class="plans__price">
+                <span class="plans__currency-sign">$</span> <span class="plans__cost">99</span>
+                <span class="plans__period">one time</span>
+              </p>
+              <ul class="plans__benefits-list">
+                <li class="plans__benefits-item">Word Definitions</li>
+                <li class="plans__benefits-item">Unlimited Lists</li>
+                <li class="plans__benefits-item">
+                  Directly add words from any site using Chrome Extension
+                </li>
+              </ul>
+              <a class="plans__signup-btn" href="https://boostvocab.com/register">Sign up today</a>
             </div>
-          </div>
+          </li>
           <!-- END : Modern pricing table - Lifetime -->
-        </div>
+        </ul>
       </div>
     </div>
   </body>

@@ -1,0 +1,171 @@
+/* :root {
+  --primary-color: #757575;
+  --secondary-color: #ffffff;
+  --title-color: #212121;
+  --accent-color: #2196f3;
+  --primary-background-color: #2f303a;
+  --secondary-background-color: #f5f4fa;
+  --header-logo-color: #000000;
+  --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --hero-hover-btn-color: #188ce8;
+  --border-header-color: #ececec;
+  --border-card-color: #eeeeee;
+  --hero-gradient-color: rgba(47, 48, 58, 0.4);
+  --icon-color: #afb1b8;
+  --footer-soc-bg: rgba(255, 255, 255, 0.1);
+  --portfolio-wrapper-bg: rgba(33, 150, 243, 0.9);
+  --works-wrapper-bg: rgba(47, 48, 58, 0.8);
+  --backdrop-overlay-color: rgba(0, 0, 0, 0.2);
+  --placeholder-color: rgba(117, 117, 117, 0.5);
+} */
+
+body {
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/* Reset */
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plans {
+  padding-top: 14px;
+
+  background-color: #edf0f5;
+}
+
+.plans__title {
+  margin-bottom: 37px;
+  text-align: center;
+
+  font-size: 29px;
+  letter-spacing: 0.01em;
+}
+
+.plans__list {
+  /* outline: 1px solid tomato; */
+
+  display: flex;
+  justify-content: center;
+}
+
+.plans__card {
+  width: 250px;
+}
+
+.plans__card-wrapper {
+  outline: 1px solid tomato;
+
+  width: 100%;
+  padding-top: 19px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: #fff;
+
+  border-radius: 5px;
+}
+
+.plans__name {
+  margin-bottom: 26px;
+
+  font-weight: 700;
+}
+
+.plans__price {
+  margin-bottom: 40px;
+}
+
+.plans__currency-sign {
+  font-size: 20px;
+  font-weight: 700;
+}
+.plans__cost {
+  font-size: 70px;
+  line-height: 1;
+}
+.plans__period {
+}
+
+.plans__benefits-list {
+  width: 180px;
+  margin-bottom: 30px;
+
+  display: grid;
+  gap: 15px;
+}
+
+.plans__benefits-item {
+  display: flex;
+}
+
+.plans__benefits-item::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+
+  background-image: url(./img/checkbox_icon.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.plans__signup-btn {
+  outline: 1px solid tomato;
+
+  display: inline-block;
+  width: 100%;
+  height: 35px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  text-align: center;
+
+  border-radius: 5px;
+}
+
+.plans__ribbon {
+}
+
+.plans__popular {
+}
