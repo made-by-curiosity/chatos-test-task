@@ -9,6 +9,11 @@
   --ribbon-corners-color: #c91f30;
   --ribbon-color: #e44251;
   --ribbon-shadow-color: rgba(0, 0, 0, 0.3);
+
+  --mobile-s: 320px;
+  --mobile-l: 425px;
+  --tablet: 768px;
+  --desktop: 1200px;
 }
 
 body {
@@ -37,12 +42,26 @@ ul {
   list-style: none;
 }
 
+/* main */
+
 .container {
-  max-width: 1200px;
+  max-width: var(--mobile-s);
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 425px) {
+    max-width: var(--mobile-l);
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: var(--tablet);
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: var(--desktop);
+  }
 }
 
 .plans {
@@ -63,17 +82,20 @@ ul {
 .plans__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
 }
 
 .plans__card {
   width: 250px;
-
   position: relative;
 }
 
 .plans__card--popular {
-  position: relative;
-  top: -15px;
+  @media screen and (min-width: 1200px) {
+    position: relative;
+    top: -15px;
+  }
 }
 
 .plans__card-wrapper {
