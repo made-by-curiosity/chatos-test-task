@@ -4,7 +4,63 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/users-table.css" />
     <title>Users table</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <form class="user-form">
+        <label>
+          <span>Name:</span>
+          <input type="text" class="user-name" />
+        </label>
+        <label>
+          <span>Email:</span>
+          <input type="email" class="user-email" />
+        </label>
+        <label>
+          <span>Age:</span>
+          <input type="text" class="user-age" />
+        </label>
+        <button type="button" class="add-btn">Add</button>
+      </form>
+      <table class="users-table">
+        <caption>
+          Users
+        </caption>
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>email</th>
+            <th>age</th>
+            <th>action</th>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>John</td>
+            <td>john@int.com</td>
+            <td>39</td>
+            <td>edit/delete</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Max</td>
+            <td>max@int.com</td>
+            <td>24</td>
+            <td>edit/delete</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Bob</td>
+            <td>bob@int.com</td>
+            <td>32</td>
+            <td>edit/delete</td>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
 </html>
