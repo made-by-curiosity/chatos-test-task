@@ -12,17 +12,17 @@
       <form class="user-form">
         <label>
           <span>Name:</span>
-          <input type="text" class="user-name" />
+          <input type="text" class="user-name" name="name" />
         </label>
         <label>
           <span>Email:</span>
-          <input type="email" class="user-email" />
+          <input type="email" class="user-email" name="email" />
         </label>
         <label>
           <span>Age:</span>
-          <input type="text" class="user-age" />
+          <input type="number" class="user-age" name="age" />
         </label>
-        <button type="button" class="add-btn">Add</button>
+        <button type="submit" class="add-btn">Add</button>
       </form>
       <table class="users-table">
         <caption>
@@ -61,6 +61,6 @@
         <tbody></tbody>
       </table>
     </div>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.js" type="module"></script>
   </body>
 </html>
