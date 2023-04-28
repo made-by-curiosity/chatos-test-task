@@ -1,4 +1,6 @@
-const save = (key, value) => {
+const STORAGE_KEY = 'saved-users';
+
+export const save = (key, value) => {
   try {
     const serializedState = JSON.stringify(value);
     localStorage.setItem(key, serializedState);
@@ -7,7 +9,7 @@ const save = (key, value) => {
   }
 };
 
-const load = key => {
+export const load = key => {
   try {
     const serializedState = localStorage.getItem(key);
     return serializedState === null ? undefined : JSON.parse(serializedState);
@@ -16,7 +18,23 @@ const load = key => {
   }
 };
 
-export default {
-  save,
-  load,
-};
+export function saveUsers(id, users) {
+  const updatedUsersInfo = {
+    currentId: id,
+    users,
+  };
+
+  save(STORAGE_KEY, updatedUsersInfo);
+}
+
+export function getUsers() {
+  return load(STORAGE_KEY)?.users || [];
+}
+
+export function getCurrentId() {
+  const users = getUsers();
+  if (users.length === 0) {
+    return 1;
+  }
+  return load(STORAGE_KEY)?.currentId || 1;
+}
