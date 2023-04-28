@@ -37,8 +37,19 @@ ul {
   gap: 10px;
 }
 
-.add-btn {
+.add-btn,
+.save-btn {
   width: 100px;
+
+  display: inline-block;
+}
+
+.add-btn.is-hidden {
+  display: none;
+}
+
+.save-btn.is-hidden {
+  display: none;
 }
 
 table {
