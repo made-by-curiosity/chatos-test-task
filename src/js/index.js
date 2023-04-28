@@ -63,6 +63,15 @@ function onSaveBtnClick(e) {
 
 function onSortButtonsClick(e) {
   const rows = [...refs.tableBody.rows];
+  const columnNames = refs.tableHead.children[0].children;
+
+  [...columnNames].forEach(cell => {
+    if (cell.children[0].classList.contains('sorted')) {
+      cell.children[0].classList.remove('sorted');
+    }
+  });
+
+  e.target.classList.add('sorted');
 
   if (e.target.dataset.sort === 'desc') {
     e.target.setAttribute('data-sort', 'asc');

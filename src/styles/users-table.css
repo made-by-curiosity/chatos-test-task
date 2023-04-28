@@ -31,7 +31,7 @@ button {
 }
 
 .user-form {
-  max-width: 200px;
+  width: 200px;
   margin-bottom: 30px;
 
   display: flex;
@@ -39,6 +39,10 @@ button {
   align-items: center;
 
   gap: 10px;
+}
+
+.user-form input {
+  width: 100%;
 }
 
 .add-btn,
@@ -72,4 +76,14 @@ table td {
 
 .empty-message.is-hidden {
   display: none;
+}
+
+.sort-btn {
+  border: none;
+  background-color: transparent;
+}
+
+.sort-btn.sorted::after {
+  content: '\21C5';
+  margin-left: 5px;
 }
