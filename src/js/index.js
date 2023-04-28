@@ -2,16 +2,22 @@ import storage from './storage.js';
 
 const refs = {
   userForm: document.querySelector('form.user-form'),
+  tableBody: document.querySelector('table.users-table tbody'),
   // nameInput: document.querySelector('input.user-name'),
   // emailInput: document.querySelector('input.user-email'),
   // ageInput: document.querySelector('input.user-age'),
   // addBtn: document.querySelector('button.add-btn'),
 };
-const STORAGE_KEY = 'users';
-const users = storage.load(STORAGE_KEY);
-console.log(users);
+const STORAGE_KEY = 'saved-users';
+const savedUsersState = storage.load(STORAGE_KEY) || {};
+console.log(savedUsersState);
 
-let userId = 1;
+let users = storage.load(STORAGE_KEY)?.users || [];
+console.log(users);
+let userId = storage.load(STORAGE_KEY)?.currentId || 1;
+console.log(userId);
+
+populateTableOnLoad(users);
 
 refs.userForm.addEventListener('submit', onFormSubmit);
 
@@ -28,12 +34,37 @@ function onFormSubmit(e) {
     email: userEmail,
     age: userAge,
   };
-  const newUsers = { ...users, newUser };
 
-  storage.save(STORAGE_KEY, newUsers);
+  users.push(newUser);
+
+  userId += 1;
+  const usersInfoToSave = {
+    currentId: userId,
+    users,
+  };
+
+  storage.save(STORAGE_KEY, usersInfoToSave);
+  renderUser(newUser);
 
   e.target.reset();
-  userId += 1;
 }
 
-function populateOnLoad() {}
+function renderUser({ id, name, email, age }) {
+  const markup = `<tr>
+            <td>${id}</td>
+            <td>${name}</td>
+            <td>${email}</td>
+            <td>${age}</td>
+            <td>edit/delete</td>
+          </tr>`;
+
+  refs.tableBody.insertAdjacentHTML('beforeend', markup);
+}
+
+function populateTableOnLoad(users) {
+  if (users === []) {
+    return;
+  }
+
+  users.forEach(renderUser);
+}
