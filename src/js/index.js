@@ -12,45 +12,19 @@ refs.saveBtn.addEventListener('click', onSaveBtnClick);
 refs.tableBody.addEventListener('click', onUserButtonsClick);
 refs.tableHead.addEventListener('click', onSortButtonsClick);
 
-function onSortButtonsClick(e) {
-  const rows = [...refs.tableBody.rows];
-
-  if (e.target.dataset.sort === 'asc') {
-    e.target.dataset.sort = 'desc';
+function onAddBtnClick() {
+  if (
+    refs.nameInput.value.trim() === '' ||
+    refs.emailInput.value.trim() === '' ||
+    refs.ageInput.value.trim() === ''
+  ) {
+    refs.emptyMessage.classList.remove('is-hidden');
+    setTimeout(() => {
+      refs.emptyMessage.classList.add('is-hidden');
+    }, 3000);
     return;
   }
-  e.target.setAttribute('data-sort', 'asc');
 
-  if (e.target.dataset.type === 'id') {
-    const idAscSort = sortAscNumbers(rows, 0);
-    const idDescSort = sortDescNumbers(rows, 0);
-    console.log(idAscSort);
-    console.log(idDescSort);
-  }
-
-  if (e.target.dataset.type === 'name') {
-    const nameAscSort = sortAscString(rows, 1);
-    const nameDescSort = sortDescString(rows, 1);
-    console.log(nameAscSort);
-    console.log(nameDescSort);
-  }
-
-  if (e.target.dataset.type === 'email') {
-    const emailAscSort = sortAscString(rows, 2);
-    const emailDescSort = sortDescString(rows, 2);
-    console.log(emailAscSort);
-    console.log(emailDescSort);
-  }
-
-  if (e.target.dataset.type === 'age') {
-    const ageAscSort = sortAscNumbers(rows, 3);
-    const ageDescSort = sortDescNumbers(rows, 3);
-    console.log(ageAscSort);
-    console.log(ageDescSort);
-  }
-}
-
-function onAddBtnClick() {
   let currentUserId = getCurrentId();
   const users = getUsers();
   const newUser = createUser(currentUserId);
@@ -85,4 +59,59 @@ function onSaveBtnClick(e) {
 
   refs.saveBtn.removeAttribute('data-id');
   resetForm();
+}
+
+function onSortButtonsClick(e) {
+  const rows = [...refs.tableBody.rows];
+
+  if (e.target.dataset.sort === 'desc') {
+    e.target.setAttribute('data-sort', 'asc');
+  } else {
+    e.target.setAttribute('data-sort', 'desc');
+  }
+
+  if (e.target.dataset.type === 'id') {
+    if (e.target.dataset.sort === 'asc') {
+      const idAscSort = sortAscNumbers(rows, 0);
+      refs.tableBody.append(...idAscSort);
+
+      return;
+    }
+
+    const idDescSort = sortDescNumbers(rows, 0);
+    refs.tableBody.append(...idDescSort);
+  }
+
+  if (e.target.dataset.type === 'name') {
+    if (e.target.dataset.sort === 'asc') {
+      const nameAscSort = sortAscString(rows, 1);
+      refs.tableBody.append(...nameAscSort);
+      return;
+    }
+
+    const nameDescSort = sortDescString(rows, 1);
+    refs.tableBody.append(...nameDescSort);
+  }
+
+  if (e.target.dataset.type === 'email') {
+    if (e.target.dataset.sort === 'asc') {
+      const emailAscSort = sortAscString(rows, 2);
+      refs.tableBody.append(...emailAscSort);
+      return;
+    }
+
+    const emailDescSort = sortDescString(rows, 2);
+    refs.tableBody.append(...emailDescSort);
+  }
+
+  if (e.target.dataset.type === 'age') {
+    if (e.target.dataset.sort === 'asc') {
+      const ageAscSort = sortAscNumbers(rows, 3);
+      refs.tableBody.append(...ageAscSort);
+      return;
+    }
+
+    const ageDescSort = sortDescNumbers(rows, 3);
+    refs.tableBody.append(...ageDescSort);
+  }
 }

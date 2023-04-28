@@ -65,3 +65,11 @@ table td {
   padding: 10px;
   border: 1px solid #2a2a2a;
 }
+
+.empty-message {
+  color: tomato;
+}
+
+.empty-message.is-hidden {
+  display: none;
+}

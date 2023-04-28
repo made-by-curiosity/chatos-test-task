@@ -6,4 +6,5 @@ export const refs = {
   ageInput: document.querySelector('input.user-age'),
   addBtn: document.querySelector('button.add-btn'),
   saveBtn: document.querySelector('button.save-btn'),
+  emptyMessage: document.querySelector('p.empty-message'),
 };
