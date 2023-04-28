@@ -87,3 +87,8 @@ table td {
   content: '\21C5';
   margin-left: 5px;
 }
+
+.return {
+  display: block;
+  margin: 20px;
+}
