@@ -189,7 +189,7 @@ ul {
 
   display: block;
 
-  background-image: url(/src/img/green-check-mark-verified-circle-16223.svg);
+  background-image: url(../img/green-check-mark-verified-circle-16223.svg);
   background-repeat: no-repeat;
   background-size: contain;
 }
